@@ -34,7 +34,7 @@ test:
     - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    - pytest
+    - pytest >=6.2.2
 
 about:
   home: https://github.com/lukasschwab/arxiv.py
