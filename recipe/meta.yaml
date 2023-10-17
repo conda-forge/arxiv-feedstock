@@ -18,10 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
-    - feedparser
-    - python >=3.6
+    - python >=3.7
+    - feedparser ==6.0.10
+    - requests ==2.31.0
 
 test:
   source_files:
