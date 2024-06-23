@@ -1,5 +1,5 @@
 {% set name = "arxiv" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/arxiv-{{ version }}.tar.gz
-  sha256: eb4b1d5ab9dfd66027c344bb324c20be21d56fe15f6ce216ed5b209df747dea8
+  sha256: f98c4a922b3c7881b6b55ca6eea7e4fa8747c9d7cf6cad539254dc9f48733702
 
 build:
   number: 0
