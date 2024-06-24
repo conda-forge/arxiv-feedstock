@@ -22,20 +22,15 @@ requirements:
   run:
     - python >=3.7
     - feedparser ==6.0.10
-    - requests ==2.31.0
+    - requests ==2.32.0
 
 test:
-  # Something is wrong with the way the test suite is accessing the internet, disable for now
-  # source_files:
-  #   - tests
   imports:
     - arxiv
   commands:
     - pip check
-    # - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    # - pytest >=6.2.2
 
 about:
   home: https://github.com/lukasschwab/arxiv.py
