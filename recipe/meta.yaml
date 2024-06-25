@@ -21,8 +21,8 @@ requirements:
     - python >=3.7
   run:
     - python >=3.7
-    - feedparser ==6.0.10
-    - requests ==2.31.0
+    - feedparser >=6.0.10,<6.1.dev0
+    - requests >=2.32.0,<2.33.dev0
 
 test:
   # Something is wrong with the way the test suite is accessing the internet, disable for now
