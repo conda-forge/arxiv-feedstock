@@ -7,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/arxiv-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/arxiv-{{ version }}.tar.gz
   sha256: 32365221994d2cf05657c1fadf63a26efc8ccdec18590281ee03515bfef8bc4e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - feedparser >=6.0.10,<6.1.dev0
     - requests >=2.32.0,<2.33.dev0
 
@@ -36,6 +36,7 @@ test:
   requires:
     - pip
     # - pytest >=6.2.2
+    - python {{ python_min }}
 
 about:
   home: https://github.com/lukasschwab/arxiv.py
