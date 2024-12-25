@@ -19,23 +19,19 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - python >={{ python_min }}
     - feedparser >=6.0.10,<6.1.dev0
     - requests >=2.32.0,<2.33.dev0
 
 test:
-  # Something is wrong with the way the test suite is accessing the internet, disable for now
-  # source_files:
-  #   - tests
   imports:
     - arxiv
   commands:
     - pip check
-    # - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    # - pytest >=6.2.2
     - python {{ python_min }}
 
 about:
