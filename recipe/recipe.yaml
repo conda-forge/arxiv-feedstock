@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  name: arxiv
+  version: 2.3.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/arxiv-${{ version }}.tar.gz
+  sha256: 0fd8224180819cf8d0c6c3964bdca18cd33775adc8938562c788abed3bab6b1f
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - feedparser ~=6.0.10
+    - requests ~=2.32.0
+
+tests:
+  - python:
+      imports:
+        - arxiv
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: "Python wrapper for the arXiv API: http://arxiv.org/help/api/"
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://github.com/lukasschwab/arxiv.py
+  documentation: http://lukasschwab.me/arxiv.py/index.html
+
+extra:
+  recipe-maintainers:
+    - thewchan
