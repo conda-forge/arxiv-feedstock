@@ -25,7 +25,7 @@ requirements:
     - hatch-vcs
   run:
     - python >=${{ python_min }}
-    - feedparser ~=6.0.10
+    - lxml >=6.1.0,<7.0
     - requests >=2.32,<2.34
     - typing_extensions >=4.0.0
 
