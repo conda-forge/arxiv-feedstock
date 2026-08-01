@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: arxiv
-  version: "4.0.0"
+  version: "4.0.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/arxiv-${{ version }}.tar.gz
-  sha256: 1d30a1dba5054e0df9b1d63f8e190b58e6a59d0c2f4ccec344ce1de5bafe546d
+  sha256: 304e91a9f869fa4cc362a0a6f38ecb956eec11b83619465172ab24b9453e3d51
 
 build:
   number: 0
